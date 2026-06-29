@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Navbar from "@/components/layout/Navbar";
-import { withBasePath } from "@/lib/basePath";
+import { Navbar, PageWrapper } from "@/components/layout";
 import { MedicalGlossaryExplorer } from "./MedicalGlossaryExplorer";
-import { Navbar, PageWrapper, Section } from "@/components/layout";
 
 export const metadata: Metadata = {
   title: "Medical Glossary | UltimateHealth",

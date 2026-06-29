@@ -66,7 +66,7 @@ export const Navbar = (props: { tracking_id: any }) => {
   return (
     <>
       <header
-        className={`header${scrolled ? ' scrolled' : ''}bg-white dark:bg-slate-900 transition-colors duration-300 h-[80px]`}
+        className={`header${scrolled ? ' scrolled' : ''} bg-white dark:bg-slate-900 transition-colors duration-300 h-[80px]`}
         id="header"
       >
         <PageWrapper as="div" className="nav">
@@ -86,7 +86,7 @@ export const Navbar = (props: { tracking_id: any }) => {
           <ul className="nav-links text-black dark:text-white">
             <li>
               <a
-                href={withBasePath('/#feature')}
+                href={withBasePath('/#features')}
                 className={`nav-link-item${activeSection === 'features' ? ' active' : ''}`}
                 aria-current={
                   activeSection === 'features' ? 'location' : undefined
@@ -178,28 +178,28 @@ export const Navbar = (props: { tracking_id: any }) => {
         </PageWrapper>
 
         <nav className={`mobile-nav${mobileMenuOpen ? ' open' : ''}`}>
-          <a href="#screenshots" onClick={() => setMobileMenuOpen(false)}>
+          <a href={withBasePath('/#screenshots')} onClick={() => setMobileMenuOpen(false)}>
             Screenshots
           </a>
-          <a href="#features" onClick={() => setMobileMenuOpen(false)}>
+          <a href={withBasePath('/#features')} onClick={() => setMobileMenuOpen(false)}>
             Platform Highlights
           </a>
-          <a href="#programs" onClick={() => setMobileMenuOpen(false)}>
+          <a href={withBasePath('/#programs')} onClick={() => setMobileMenuOpen(false)}>
             Community Programs
           </a>
-          <a href="https://uhsocial.in/docs" target="_blank" rel="noreferrer">
+          <Link href={withBasePath('/articles')} onClick={() => setMobileMenuOpen(false)}>
             Read Articles
-          </a>
+          </Link>
           <Link
-            href="/medical-glossary"
+            href={withBasePath('/medical-glossary')}
             onClick={() => setMobileMenuOpen(false)}
           >
             Medical Glossary
           </Link>
-          <Link href="/contribute" onClick={() => setMobileMenuOpen(false)}>
+          <Link href={withBasePath('/contribute')} onClick={() => setMobileMenuOpen(false)}>
             Join Us to Contribute
           </Link>
-          <a href="#downloads" onClick={() => setMobileMenuOpen(false)}>
+          <a href={withBasePath('/#downloads')} onClick={() => setMobileMenuOpen(false)}>
             Login / Register
           </a>
         </nav>
